@@ -1,0 +1,4 @@
+unless Rails.env.production?
+  ENV['STRIPE_TEST_PUBLISHABLE_KEY'] = 'pk_test_51OOzJKJWiMif1SYqO4Tbeg2hhyPjkRIwUg0JjOBPfJhBeXHz35c8FmL8AaVVIisEPZEPVizl4FHQsvklisYNETh900EYjmMgaH'
+  ENV['STRIPE_TEST_SECRET_KEY'] = 'sk_test_51OOzJKJWiMif1SYqUaHhaYZsjqK3PstH4jD5xY1Q2vS5mKADT0MpVcgHava38HXxkshfNiwjuKkKBXAXwM8qMOaJ00gjHPwiFk'
+end
