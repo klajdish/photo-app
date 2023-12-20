@@ -1,8 +1,7 @@
 $(document).on('ready turbolinks:load', function() {
-    var show_error, stripeResponseHandler, submitHandler;
     $(".cc_form").on('submit', submitHandler);
 
-    submitHandler = function(event) {
+    function submitHandler(event) {
         var $form = $(event.target);
         $form.find("input[type=submit]").prop("disabled", true);
 
@@ -16,7 +15,7 @@ $(document).on('ready turbolinks:load', function() {
         return false;
     };
 
-    stripeResponseHandler = function(status, response) {
+    function stripeResponseHandler(status, response) {
         var token, $form;
         $form = $('.cc_form');
         if (response.error) {
@@ -37,7 +36,7 @@ $(document).on('ready turbolinks:load', function() {
         return false;
     };
 
-    show_error = function(message) {
+    function show_error(message) {
         if ($("#flash-messages").size() < 1) {
             $('div.container.main div:first').prepend("<div id='flash-messages'></div>")
         }
